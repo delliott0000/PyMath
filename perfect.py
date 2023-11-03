@@ -8,6 +8,11 @@ def perfect_number(n: int) -> bool:
     Factors include 1 but exclude the number itself.
     """
 
+    if n == 1:
+        return False
+    elif n <= 0 or n % 1:
+        raise ValueError('{0} is not a natural number'.format(n))
+
     s = 1
 
     for i in range(2, n // 2 + 1):
@@ -21,7 +26,10 @@ if __name__ == '__main__':
 
     # Tests
     print(perfect_number(6))         # True
-    print(perfect_number(28))        # True
     print(perfect_number(8128))      # True
 
-    print(perfect_number(99999991))  # False
+    print(perfect_number(1))         # False
+    print(perfect_number(999991))    # False
+
+    # noinspection PyTypeChecker
+    print(perfect_number(-1 / 12))   # Raises ValueError
