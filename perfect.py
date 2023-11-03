@@ -8,9 +8,9 @@ def perfect_number(n: int) -> bool:
     Factors include 1 but exclude the number itself.
     """
 
-    s = 0
+    s = 1
 
-    for i in range(1, n // 2 + 1):
+    for i in range(2, n // 2 + 1):
         if not n % i:
             s += i
 
