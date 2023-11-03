@@ -20,8 +20,8 @@ def perfect_number(n: int) -> bool:
 if __name__ == '__main__':
 
     # Tests
-    print(perfect_number(6))     # True
-    print(perfect_number(28))    # True
-    print(perfect_number(8128))  # True
+    print(perfect_number(6))         # True
+    print(perfect_number(28))        # True
+    print(perfect_number(8128))      # True
 
     print(perfect_number(99999991))  # False
